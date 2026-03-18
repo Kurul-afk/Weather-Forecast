@@ -1,9 +1,7 @@
-import React from "react";
 import DetailCard from "../DetailCard";
 import { useWeatherStore } from "../../../stores/weatherStore";
 import {
   PressureIcon,
-  RainIcon,
   VisibilityIcon,
   WindIcon,
 } from "../../../assets";

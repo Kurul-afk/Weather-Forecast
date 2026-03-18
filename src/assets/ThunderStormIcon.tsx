@@ -1,11 +1,11 @@
 import { useGSAP } from "@gsap/react";
-import React, { useEffect, useRef } from "react";
+import { useRef } from "react";
 import gsap from "gsap";
 
 export default function ThunderStormIcon() {
   const containerRef = useRef<HTMLDivElement>(null);
   const cloudRef = useRef<HTMLDivElement>(null);
-  const boltRef = useRef<HTMLDivElement>(null);
+  const boltRef = useRef<SVGPathElement>(null);
 
   useGSAP(
     () => {

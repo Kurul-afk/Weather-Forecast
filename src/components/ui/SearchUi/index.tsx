@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { useWeatherStore } from "../../../stores/weatherStore";
 
 export default function SearchUi() {
-  const [query, setQuery] = useState(null);
+  const [query, setQuery] = useState("");
   const { searchCountry } = useWeatherStore();
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();

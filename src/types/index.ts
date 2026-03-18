@@ -37,7 +37,7 @@ interface SysForecastCondition {
 }
 export interface WeatherDataState {
   coord: CoordCondition;
-  weather: WeatherCondition;
+  weather: WeatherCondition[];
   base: string;
   main: MainCondition;
   visibility: number;
@@ -92,7 +92,7 @@ interface WeatherAction {
   searchCountry: (city: string) => Promise<{
     weatherData: WeatherDataState;
     forecastData: ForecastDataState;
-  }>;
+  } | null>;
   resetWeather: () => void;
 }
 
@@ -111,3 +111,7 @@ export interface FilteredForecast {
 }
 
 export type WeatherStore = WeatherState & WeatherAction;
+
+export interface ForecastCardProps {
+  day: ForecastDataList;
+}

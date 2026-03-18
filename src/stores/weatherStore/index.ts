@@ -59,6 +59,7 @@ export const useWeatherStore = create<WeatherStore>((set) => ({
           },
           isLoading: false,
         });
+        return filteredForecast;
       } else {
         set({
           isLoading: false,

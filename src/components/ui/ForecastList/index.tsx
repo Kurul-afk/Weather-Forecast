@@ -1,4 +1,3 @@
-import React from "react";
 import { useWeatherStore } from "../../../stores/weatherStore";
 import ForecastCard from "../ForecastCard";
 

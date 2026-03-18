@@ -1,4 +1,3 @@
-import React from "react";
 import { useWeatherStore } from "../../../stores/weatherStore";
 import { weatherIcons } from "../../../utils/weatherIcons";
 import { CloudsIcon } from "../../../assets";
@@ -13,7 +12,7 @@ export default function MainCard() {
       <div className="pt-20 px-10 pb-10 flex justify-between">
         <div>
           <h2 className="text-8xl text-white mb-10">
-            {Math.round(weather?.main.temp)}
+            {Math.round(weather?.main.temp ?? 0)}
             <span className="text-3xl"> °C</span>
           </h2>
           <p className="text-white text-xl mb-5">
@@ -23,7 +22,7 @@ export default function MainCard() {
             <div>
               <p className="text-white">Feels like</p>
               <p className="text-white">
-                {Math.round(weather?.main.feels_like)}°C
+                {Math.round(weather?.main.feels_like ?? 0)}°C
               </p>
             </div>
             <div>

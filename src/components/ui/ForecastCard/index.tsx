@@ -1,13 +1,16 @@
-import React from "react";
-import { ClearIcon } from "../../../assets";
-import type { FilteredForecast } from "../../../types";
+import { useEffect } from "react";
+import type { ForecastCardProps } from "../../../types";
 import { weatherIcons } from "../../../utils/weatherIcons";
 
-export default function ForecastCard({ day }: FilteredForecast) {
+export default function ForecastCard({ day }: ForecastCardProps) {
   const date = new Date(day.dt * 1000).toLocaleDateString("en-EN", {
     weekday: "short",
     day: "numeric",
   });
+
+  useEffect(() => {
+    console.log(day, "test");
+  }, []);
 
   const iconCode = day?.weather[0].icon;
 

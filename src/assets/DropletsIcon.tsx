@@ -1,11 +1,11 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import React, { useRef } from "react";
+import { useRef } from "react";
 
 export default function DropletsIcon() {
   const containerRef = useRef<HTMLDivElement>(null);
-  const mainDropletRef = useRef<HTMLDivElement>(null);
-  const secondDropletRef = useRef<HTMLDivElement>(null);
+  const mainDropletRef = useRef<SVGPathElement>(null);
+  const secondDropletRef = useRef<SVGPathElement>(null);
 
   useGSAP(
     () => {

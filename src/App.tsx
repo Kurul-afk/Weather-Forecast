@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { ToastContainer } from "react-toastify";
 import MainCard from "./components/ui/MainCard";
 import "./App.css";

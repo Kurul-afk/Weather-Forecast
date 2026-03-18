@@ -1,6 +1,6 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import React, { useRef } from "react";
+import { useRef } from "react";
 
 export default function PressureIcon() {
   const containerRef = useRef<HTMLDivElement>(null);

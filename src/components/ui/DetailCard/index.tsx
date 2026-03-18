@@ -1,5 +1,3 @@
-import React from "react";
-
 export default function DetailCard({ value, title, icon }: any) {
   return (
     <div className="w-full h-full max-h-[180px] bg-zinc-600 rounded ring-1 ring-zinc-400 transition-all hover:shadow-lg hover:shadow-cyan-400/50 hover:ring-cyan-400">
