@@ -4,7 +4,6 @@ import { useRef } from "react";
 
 export default function CloudsIcon() {
   const containerRef = useRef<HTMLDivElement>(null);
-  const backCloudRef = useRef<SVGPathElement>(null);
 
   useGSAP(
     () => {
@@ -15,34 +14,6 @@ export default function CloudsIcon() {
         yoyo: true,
         ease: "sine.inOut",
       });
-
-      const tl = gsap.timeline({
-        repeat: -1,
-        delay: 0.5,
-      });
-
-      tl.fromTo(
-        backCloudRef.current,
-        {
-          x: "100%",
-          opacity: 0,
-        },
-        {
-          x: "-100%",
-          opacity: 1,
-          duration: 5,
-          ease: "linear",
-        },
-      )
-        .to(
-          backCloudRef.current,
-          {
-            opacity: 0,
-            duration: 0.5,
-          },
-          "-=0.5",
-        )
-        .to({}, { duration: 1 });
     },
     { scope: containerRef },
   );
@@ -62,15 +33,6 @@ export default function CloudsIcon() {
         className="w-full h-full"
       >
         <g id="SVGRepo_iconCarrier">
-          <path
-            ref={backCloudRef}
-            d={cloudPath}
-            stroke="#d1d5db"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            style={{ transformOrigin: "center", scale: "0.5" }}
-          />
           <path
             d={cloudPath}
             stroke="#ffffff"

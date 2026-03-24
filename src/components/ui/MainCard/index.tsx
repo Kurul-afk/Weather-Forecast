@@ -1,6 +1,7 @@
 import { useWeatherStore } from "../../../stores/weatherStore";
 import { weatherIcons } from "../../../utils/weatherIcons";
 import { CloudsIcon } from "../../../assets";
+import WeatherBackground from "../WeatherBackground/WeatherBackground";
 
 export default function MainCard() {
   const { weather } = useWeatherStore();
@@ -8,8 +9,9 @@ export default function MainCard() {
   const iconCode = weather?.weather[0].icon;
 
   return (
-    <div className="bg-zinc-800 w-full rounded-2xl ring-1 ring-cyan-500 shadow-lg shadow-cyan-500/50">
-      <div className="pt-20 px-10 pb-10 flex justify-between">
+    <div className="bg-zinc-800 w-full rounded-2xl relative  overflow-hidden">
+      <WeatherBackground iconCode={iconCode} />
+      <div className="pt-20 px-10 pb-10 flex justify-between relative  z-10">
         <div>
           <h2 className="text-8xl text-white mb-10">
             {Math.round(weather?.main.temp ?? 0)}
